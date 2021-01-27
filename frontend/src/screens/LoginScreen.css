@@ -1,0 +1,178 @@
+.landing-login {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/login2.jpg);
+  height: 1050px;
+}
+
+.container-login {
+  margin-left: 20px;
+  width: 700px;
+  background-color: #eee;
+  text-transform: uppercase;
+}
+
+.tab-content:last-child {
+  padding-bottom: 100px;
+}
+
+.tab {
+  padding: 20px 0 40px;
+  text-align: center;
+}
+
+.tab > button {
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  width: 250px;
+  height: 55px;
+  font-size: 90%;
+}
+
+.tab-content h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tab-content > form {
+  padding-left: 80px;
+}
+
+.tab-content input {
+  margin: 10px 0 20px;
+  padding: 10px;
+  font-size: 16px;
+  width: 500px;
+  height: 45px;
+  display: block;
+}
+
+.tab-content label {
+  padding-bottom: 10px;
+  font-size: 70%;
+}
+
+#check {
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 17px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#check ~ label {
+  cursor: pointer;
+}
+
+.tab-content .btn-real {
+  display: block;
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+.tab-content div {
+  text-align: center;
+}
+
+.tab-content h3 {
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.tab-content .btn {
+  margin: 0 5px;
+  padding-top: 13px !important;
+  width: 245px !important;
+  color: #fff;
+}
+
+.btn > .fa-facebook {
+  color: #fff;
+}
+
+.btn-facebook:link,
+.btn-facebook:visited {
+  background-color: #3b5998;
+}
+
+.btn-google:link,
+.btn-google:visited {
+  background-color: #f74e38;
+}
+
+.btn-facebook:hover,
+.btn-facebook:active {
+  background-color: #1647b1;
+}
+
+.btn-google:hover,
+.btn-google:active {
+  background-color: #d42b15;
+}
+
+/*---------- FOR LESS THAN 480PX WIDTH ----------*/
+
+@media (max-width: 930px) {
+  .container-login {
+    width: 450px;
+  }
+
+  .tab > button {
+    width: 200px;
+    height: 35px;
+  }
+
+  .tab-content > form {
+    padding-left: 20px;
+  }
+
+  .tab-content input {
+    width: 400px;
+  }
+
+  .tab-content > div {
+    display: grid;
+    justify-items: center;
+  }
+
+  .tab-content .btn {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  /*------- LOGIN PAGE --------*/
+
+  .container-login {
+    margin-left: 10px;
+    width: 300px;
+  }
+
+  .tab button {
+    padding-bottom: 10px;
+    width: 125px;
+    font-size: 60%;
+  }
+
+  .tab-content h1 {
+    font-size: 110%;
+  }
+
+  .tab-content input {
+    width: 250px;
+  }
+
+  .tab-content h3 {
+    width: 95%;
+    margin-bottom: 15px;
+  }
+
+  .btn-facebook,
+  .btn-google {
+    margin: 0 0 15px 30px;
+  }
+}
