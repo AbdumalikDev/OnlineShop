@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
-import products from '../products';
-import Product from '../components/Product';
+import categories from '../categories';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import Category from '../components/Category';
+import Products from '../components/Products';
 
 const HomeScreen = () => {
   return (
@@ -8,13 +10,25 @@ const HomeScreen = () => {
       <section className='landing landing-home'>
         <div className='row'>
           <div className='container-home'>
-            <a href='/' className='btn btn-white'>
+            <Link to='/' className='btn btn-white'>
               Erkaklar uchun
-            </a>
-            <a href='/' className='btn btn-white'>
+            </Link>
+            <Link to='/' className='btn btn-white'>
               Ayollar uchun
-            </a>
+            </Link>
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className='row'>
+          <h2>Ommabop toifalar</h2>
+        </div>
+
+        <div className='row card-wrapper'>
+          {categories.map(category => {
+            return <Category key={category._id} category={category} />;
+          })}
         </div>
       </section>
 
@@ -23,11 +37,7 @@ const HomeScreen = () => {
           <h2>Yangi mahsulotlar</h2>
         </div>
 
-        <div className='row products-wrapper'>
-          {products.map(product => {
-            return <Product product={product} />;
-          })}
-        </div>
+        <Products />
       </section>
     </Fragment>
   );

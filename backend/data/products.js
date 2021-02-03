@@ -15,18 +15,22 @@ const products = [
     numReviews: 3,
     features: [
       {
+        _id: 1,
         feature: 'Xotirasi',
         value: '64GB'
       },
       {
+        _id: 2,
         feature: 'Xotirasi',
         value: '64GB'
       },
       {
+        _id: 3,
         feature: 'Xotirasi',
         value: '64GB'
       },
       {
+        _id: 4,
         feature: 'Xotirasi',
         value: '64GB'
       }
@@ -141,4 +145,4 @@ const products = [
   }
 ];
 
-export default products;
+module.exports = products;

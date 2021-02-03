@@ -11,16 +11,18 @@
   text-transform: uppercase;
 }
 
-.tab-content:last-child {
+#login,
+#register {
   padding-bottom: 100px;
 }
 
-.tab {
+.login-tab {
   padding: 20px 0 40px;
   text-align: center;
 }
 
-.tab > button {
+.login-tab > button {
+  margin-right: 10px;
   text-transform: uppercase;
   border: none;
   border-bottom: 1px solid #000;
@@ -28,18 +30,19 @@
   width: 250px;
   height: 55px;
   font-size: 90%;
+  outline: none;
 }
 
-.tab-content h1 {
+.login-tab-content h1 {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.tab-content > form {
+.login-tab-content > form {
   padding-left: 80px;
 }
 
-.tab-content input {
+.login-tab-content input {
   margin: 10px 0 20px;
   padding: 10px;
   font-size: 16px;
@@ -48,12 +51,13 @@
   display: block;
 }
 
-.tab-content label {
+.login-tab-content label {
   padding-bottom: 10px;
   font-size: 70%;
 }
 
-#check {
+#check1,
+#check2 {
   cursor: pointer;
   margin-right: 5px;
   margin-top: 17px;
@@ -63,27 +67,28 @@
   vertical-align: middle;
 }
 
-#check ~ label {
+#check1 ~ label,
+#check2 ~ label {
   cursor: pointer;
 }
 
-.tab-content .btn-real {
+.login-tab-content .btn-real {
   display: block;
   width: 220px;
   margin-bottom: 20px;
 }
 
-.tab-content div {
+.login-tab-content div {
   text-align: center;
 }
 
-.tab-content h3 {
+.login-tab-content h3 {
   margin: 20px 0;
   font-weight: bold;
   font-size: 90%;
 }
 
-.tab-content .btn {
+.login-tab-content .btn {
   margin: 0 5px;
   padding-top: 13px !important;
   width: 245px !important;
@@ -121,25 +126,25 @@
     width: 450px;
   }
 
-  .tab > button {
+  .login-tab > button {
     width: 200px;
     height: 35px;
   }
 
-  .tab-content > form {
+  .login-tab-content > form {
     padding-left: 20px;
   }
 
-  .tab-content input {
+  .login-tab-content input {
     width: 400px;
   }
 
-  .tab-content > div {
+  .login-tab-content > div {
     display: grid;
     justify-items: center;
   }
 
-  .tab-content .btn {
+  .login-tab-content .btn {
     margin-top: 15px;
   }
 }
@@ -152,21 +157,21 @@
     width: 300px;
   }
 
-  .tab button {
+  .login-tab button {
     padding-bottom: 10px;
     width: 125px;
     font-size: 60%;
   }
 
-  .tab-content h1 {
+  .login-tab-content h1 {
     font-size: 110%;
   }
 
-  .tab-content input {
+  .login-tab-content input {
     width: 250px;
   }
 
-  .tab-content h3 {
+  .login-tab-content h3 {
     width: 95%;
     margin-bottom: 15px;
   }

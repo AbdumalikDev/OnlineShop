@@ -15,8 +15,8 @@ const App = () => {
         <Header />
 
         <Route path='/' component={HomeScreen} exact />
-        <Route path='/login' component={LoginScreen} exact />
-        <Route path='/product/:id' component={ProductScreen} exact />
+        <Route path='/login' component={LoginScreen} />
+        <Route path='/product/:id' component={ProductScreen} />
 
         <Feature />
         <Footer />
