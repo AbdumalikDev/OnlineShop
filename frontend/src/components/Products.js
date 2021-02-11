@@ -13,7 +13,7 @@ const Products = () => {
     };
 
     fetchProducts();
-  });
+  }, []);
 
   return (
     <>

@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: 1,
     name: 'Airpods Wireless Bluetooth Headphones',
     image: '/images/airpods.jpg',
     description:
@@ -8,68 +7,55 @@ const products = [
     brand: 'Apple',
     badge: 'Yangi',
     category: 'Eloctronics',
-    price: '4,260,000',
-    reducedPrice: '2,300,000',
+    price: 4260000,
+    reducedPrice: 2300000,
     countInStock: 3,
     rating: 4,
     numReviews: 3,
-    features: [
-      {
-        _id: 1,
-        feature: 'Xotirasi',
-        value: '64GB'
-      },
-      {
-        _id: 2,
-        feature: 'Xotirasi',
-        value: '64GB'
-      },
-      {
-        _id: 3,
-        feature: 'Xotirasi',
-        value: '64GB'
-      },
-      {
-        _id: 4,
-        feature: 'Xotirasi',
-        value: '64GB'
-      }
-    ],
-    comments: [
-      {
-        _id: 1,
-        fullName: 'Ahmadjon Isaqov',
-        comment:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, officia.',
-        rating: 4,
-        data: '20/02/2021',
-        likes: 5,
-        dislikes: 3
-      },
-      {
-        _id: 2,
-        fullName: 'Ahmadjon Isaqov',
-        comment:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, officia.',
-        rating: 4,
-        data: '20/02/2021',
-        likes: 5,
-        dislikes: 3
-      },
-      {
-        _id: 3,
-        fullName: 'Ahmadjon Isaqov',
-        comment:
-          'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, officia.',
-        rating: 4,
-        data: '20/02/2021',
-        likes: 5,
-        dislikes: 3
-      }
-    ]
+    // features: [
+    //   {
+    //     _id: 1,
+    //     feature: 'Xotirasi',
+    //     value: '64GB'
+    //   },
+    //   {
+    //     _id: 2,
+    //     feature: 'Xotirasi',
+    //     value: '64GB'
+    //   },
+    //   {
+    //     _id: 3,
+    //     feature: 'Xotirasi',
+    //     value: '64GB'
+    //   },
+    //   {
+    //     _id: 4,
+    //     feature: 'Xotirasi',
+    //     value: '64GB'
+    //   }
+    // ],
+    // reviews: [
+    //   {
+    //     name: 'Ahmadjon Isaqov',
+    //     comment:
+    //       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, officia.',
+    //     rating: 4,
+    //   },
+    //   {
+    //     name: 'Ahmadjon Isaqov',
+    //     comment:
+    //       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, officia.',
+    //     rating: 4,
+    //   },
+    //   {
+    //     name: 'Ahmadjon Isaqov',
+    //     comment:
+    //       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, officia.',
+    //     rating: 4,
+    //   }
+    // ]
   },
   {
-    _id: 2,
     name: 'LG A50 256GB Memory',
     image: '/images/phone.png',
     description:
@@ -77,14 +63,13 @@ const products = [
     brand: 'LG',
     badge: 'Yangi',
     category: 'Eloctronics',
-    price: '4,260,000',
-    reducedPrice: '2,300,000',
+    price: 4260000,
+    reducedPrice: 2300000,
     countInStock: 0,
     rating: 4,
     numReviews: 4
   },
   {
-    _id: 3,
     name: 'Cannon EOS 80D DSLR Camera',
     image: '/images/camera.png',
     description:
@@ -92,14 +77,13 @@ const products = [
     brand: 'Cannon',
     badge: 'Yangi',
     category: 'Eloctronics',
-    price: '4,260,000',
-    reducedPrice: '2,300,000',
+    price: 4260000,
+    reducedPrice: 2300000,
     countInStock: 5,
     rating: 3,
     numReviews: 3
   },
   {
-    _id: 4,
     name: 'Sony Playstation 4 Pro White Version',
     image: '/images/playstation.png',
     description:
@@ -107,14 +91,13 @@ const products = [
     brand: 'Sony',
     badge: 'Hot',
     category: 'Eloctronics',
-    price: '4,260,000',
-    reducedPrice: '2,300,000',
+    price: 4260000,
+    reducedPrice: 2300000,
     countInStock: 10,
     rating: 5,
     numReviews: 3
   },
   {
-    _id: 5,
     name: 'Logitech G-Series Gaming Mouse',
     image: '/images/mouse.jpg',
     description:
@@ -122,14 +105,13 @@ const products = [
     brand: 'Logitech',
     badge: 'Xit',
     category: 'Eloctronics',
-    price: '4,260,000',
-    reducedPrice: '2,300,000',
+    price: 4260000,
+    reducedPrice: 2300000,
     countInStock: 7,
     rating: 3.5,
     numReviews: 2
   },
   {
-    _id: 6,
     name: 'Amazon Echo Dot 3rd Generation',
     image: '/images/alexa.jpg',
     description:
@@ -137,12 +119,12 @@ const products = [
     brand: 'Amazon',
     badge: 'Yangi',
     category: 'Eloctronics',
-    price: '4,260,000',
-    reducedPrice: '2,300,000',
+    price: 4260000,
+    reducedPrice: 2300000,
     countInStock: 5,
     rating: 4,
     numReviews: 4
   }
 ];
 
-module.exports = products;
+export default products
