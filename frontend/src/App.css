@@ -282,25 +282,6 @@ nav > .row {
   background-size: cover;
   background-position: center;
 }
-.landing-home {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(./images/Shopping.jpg);
-  height: 600px;
-}
-
-.container-home {
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 400px;
-  background-color: #fff;
-  width: 450px;
-  height: 100px;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-}
-
-.container-home > a {
-  margin: 22px 2px 0;
-}
 
 /*------- FEATURED PRODUCTS -------*/
 
@@ -378,6 +359,7 @@ nav > .row {
 }
 
 .card h4 > a {
+  font-size: 18px;
   display: block;
   font-weight: 500;
   margin: 10px 0;
@@ -552,7 +534,7 @@ footer p {
   font-weight: 500;
 }
 
-/*---------- FOR LESS THAN 480PX WIDTH ----------*/
+/*---------- FOR LESS THAN 930PX WIDTH ----------*/
 
 @media (max-width: 930px) {
   /*------- NAVBAR --------*/
@@ -738,28 +720,6 @@ footer p {
 }
 
 @media (max-width: 569px) {
-  .landing-home {
-    height: 300px;
-    margin-bottom: 210px;
-  }
-
-  .container-home {
-    margin-top: 300px;
-  }
-
-  .container-home {
-    width: 250px;
-    height: 160px;
-  }
-
-  .container-home a:nth-child(1) {
-    margin-top: 25px;
-  }
-
-  .container-home a:nth-of-type(2) {
-    margin-top: 5px;
-  }
-
   section {
     padding: 20px 0;
   }

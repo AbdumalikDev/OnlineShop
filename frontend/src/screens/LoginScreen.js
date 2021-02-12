@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './LoginScreen.css';
 import TabButton from '../components/TabButton';
+import './LoginScreen.css';
 
 const LoginScreen = () => {
   const [tab, setTab] = useState('Hisob yaratish');
 
-  const changeTab = text => {
+  const changeTab = (text) => {
     setTab(text);
   };
 
@@ -15,8 +15,18 @@ const LoginScreen = () => {
       <div className='row'>
         <div className='container-login'>
           <div className='login-tab'>
-            <TabButton key='1' tabStyle={tab==='Hisob yaratish' && '3px'} text='Hisob yaratish' clickTab={changeTab} />
-            <TabButton key='2' tabStyle={tab==='Kirish' && '3px'} text='Kirish' clickTab={changeTab} />
+            <TabButton
+              key='1'
+              tabStyle={tab === 'Hisob yaratish' && '3px'}
+              text='Hisob yaratish'
+              clickTab={changeTab}
+            />
+            <TabButton
+              key='2'
+              tabStyle={tab === 'Kirish' && '3px'}
+              text='Kirish'
+              clickTab={changeTab}
+            />
           </div>
 
           <div

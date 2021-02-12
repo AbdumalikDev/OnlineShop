@@ -1,10 +1,22 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import categories from '../categories';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Category from '../components/Category';
-import Products from '../components/Products';
+import Product from '../components/Product';
+import { listProducts } from '../actions/productActions';
+import './HomeScreen.css';
 
 const HomeScreen = () => {
+  const dispatch = useDispatch();
+
+  const productList = useSelector((state) => state.productList);
+  const { loading, error, products } = productList;
+
+  useEffect(() => {
+    dispatch(listProducts());
+  }, [dispatch]);
+
   return (
     <Fragment>
       <section className='landing landing-home'>
@@ -26,7 +38,7 @@ const HomeScreen = () => {
         </div>
 
         <div className='row card-wrapper'>
-          {categories.map(category => {
+          {categories.map((category) => {
             return <Category key={category._id} category={category} />;
           })}
         </div>
@@ -36,8 +48,27 @@ const HomeScreen = () => {
         <div className='row'>
           <h2>Yangi mahsulotlar</h2>
         </div>
+        {loading ? (
+          <div className='row'>
+            <h2>Loading...</h2>
+          </div>
+        ) : error ? (
+          <div className='row'>
+            <h3>{error}</h3>
+          </div>
+        ) : (
+          <div className='row card-wrapper'>
+            {products.map((product) => {
+              return <Product key={product._id} product={product} />;
+            })}
+          </div>
+        )}
 
-        <Products />
+        <div className='row'>
+          <div className='more'>
+            <button className='btn-real btn-real-white'>Ko'proq yuklash</button>
+          </div>
+        </div>
       </section>
     </Fragment>
   );
