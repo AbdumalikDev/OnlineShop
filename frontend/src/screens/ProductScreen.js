@@ -7,8 +7,12 @@ import ProductFeature from '../components/ProductFeature';
 import TabButton from '../components/TabButton';
 import { listProductDetails } from '../actions/productActions';
 import './ProductScreen.css';
+import Spinner from '../components/Spinner';
 
-const ProductScreen = ({ match }) => {
+const ProductScreen = ({ history, match }) => {
+  const [tab, setTab] = useState('Xususiyatlari');
+  let [qty, setQty] = useState(1);
+
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.productDetails);
@@ -18,10 +22,20 @@ const ProductScreen = ({ match }) => {
     dispatch(listProductDetails(match.params.id));
   }, [dispatch, match]);
 
-  const [tab, setTab] = useState('Xususiyatlari');
-
-  const changeTab = (text) => {
+  const changeTabHandler = (text) => {
     setTab(text);
+  };
+
+  const decreaseQty = () => {
+    qty > 1 && setQty(qty--);
+  };
+
+  const increaseQty = () => {
+    setQty(qty++);
+  };
+
+  const addToCartHandler = () => {
+    history.push(`/cart/${match.params.id}?qty=${qty}`);
   };
 
   return (
@@ -29,7 +43,7 @@ const ProductScreen = ({ match }) => {
       <section>
         <div className='row'>
           {loading ? (
-            <h2>Loading...</h2>
+            <Spinner />
           ) : error ? (
             <h3>{error}</h3>
           ) : (
@@ -63,17 +77,16 @@ const ProductScreen = ({ match }) => {
                 </div>
                 <p>{product.description}</p>
                 <div className='product-counter'>
-                  <span>
+                  <span onClick={decreaseQty}>
                     <i className='fa fa-minus'></i>
                   </span>
                   <input
                     type='text'
-                    value={product.countInStock === 0 ? '0' : '1'}
+                    value={product.countInStock === 0 ? '0' : qty}
                     min='1'
                     max={product.countInStock}
-                    readOnly
                   />
-                  <span>
+                  <span onClick={increaseQty}>
                     <i className='fa fa-plus'></i>
                   </span>
                 </div>
@@ -86,7 +99,11 @@ const ProductScreen = ({ match }) => {
                     Sotib olish
                   </Link>
                 )}
-                <button className='btn-real btn-real-white' type='button'>
+                <button
+                  onClick={addToCartHandler}
+                  className='btn-real btn-real-white'
+                  type='button'
+                >
                   Savatga qo'shish
                 </button>
               </div>
@@ -111,12 +128,12 @@ const ProductScreen = ({ match }) => {
               <TabButton
                 tabStyle={tab === 'Xususiyatlari' && '3px'}
                 text='Xususiyatlari'
-                clickTab={changeTab}
+                clickTab={changeTabHandler}
               />
               <TabButton
                 tabStyle={tab !== 'Xususiyatlari' && '3px'}
                 text={['Izohlar ', <sup> {product.numReviews} </sup>]}
-                clickTab={changeTab}
+                clickTab={changeTabHandler}
               />
             </div>
 

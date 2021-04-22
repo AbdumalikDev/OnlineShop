@@ -6,6 +6,7 @@ import Category from '../components/Category';
 import Product from '../components/Product';
 import { listProducts } from '../actions/productActions';
 import './HomeScreen.css';
+import Spinner from '../components/Spinner';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -49,9 +50,7 @@ const HomeScreen = () => {
           <h2>Yangi mahsulotlar</h2>
         </div>
         {loading ? (
-          <div className='row'>
-            <h2>Loading...</h2>
-          </div>
+          <Spinner />
         ) : error ? (
           <div className='row'>
             <h3>{error}</h3>

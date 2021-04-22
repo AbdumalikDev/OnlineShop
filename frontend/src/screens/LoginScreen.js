@@ -6,7 +6,7 @@ import './LoginScreen.css';
 const LoginScreen = () => {
   const [tab, setTab] = useState('Hisob yaratish');
 
-  const changeTab = (text) => {
+  const changeTabHandler = (text) => {
     setTab(text);
   };
 
@@ -19,13 +19,13 @@ const LoginScreen = () => {
               key='1'
               tabStyle={tab === 'Hisob yaratish' && '3px'}
               text='Hisob yaratish'
-              clickTab={changeTab}
+              clickTab={changeTabHandler}
             />
             <TabButton
               key='2'
               tabStyle={tab === 'Kirish' && '3px'}
               text='Kirish'
-              clickTab={changeTab}
+              clickTab={changeTabHandler}
             />
           </div>
 
@@ -80,7 +80,7 @@ const LoginScreen = () => {
             className='login-tab-content'
             style={{ display: tab === 'Hisob yaratish' && 'none' }}
           >
-            <h1>Xush kelibsiz!</h1>
+            <h1>Hisobimga kirish</h1>
             <form method='post'>
               <label for='email2'>Email</label>
               <input

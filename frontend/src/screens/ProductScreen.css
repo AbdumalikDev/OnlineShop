@@ -14,6 +14,7 @@
 
 .product-wrapper img {
   max-width: 100%;
+  cursor: pointer;
 }
 
 .product-photo {
